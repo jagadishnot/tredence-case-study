@@ -1,21 +1,3 @@
-"""
-Self-Pruning Neural Network on CIFAR-10
-========================================
-Author  : Jagadish
-Task    : Tredence AI Engineering Intern – Case Study
-Problem : "The Self-Pruning Neural Network"
-
-Design highlights
------------------
-* PrunableLinear  – custom nn.Linear with per-weight learnable sigmoid gates.
-* SparsityLoss    – MEAN L1 of all gate values (keeps scale ∈ (0,1) regardless
-                    of network size, so λ directly controls the trade-off).
-* Total Loss      – CrossEntropy  +  λ × mean(all_gates)
-* gate_scores initialised to +2  →  sigmoid(+2) ≈ 0.88  (gates start OPEN,
-                    optimiser must actively close them → sparsity visible early).
-* Sparsity metric: gate < 0.5  →  pruned  (more closed than open).
-* Three λ values (0.1 / 0.5 / 2.0) reveal the sparsity–accuracy trade-off.
-"""
 
 import math
 import time
