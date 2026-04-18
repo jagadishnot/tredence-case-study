@@ -1,4 +1,4 @@
-# 🚀 Self-Pruning Neural Network (CIFAR-10)
+# Self-Pruning Neural Network (CIFAR-10)
 
 ## 📌 Overview
 
@@ -86,7 +86,7 @@ The plot below shows how weights are pruned:
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/tredence-case-study.git
+git clone https://github.com/jagadishnot/tredence-case-study.git
 cd tredence-case-study
 ```
 
